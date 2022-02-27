@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.22)
+set(CMAKE_SYSTEM_PROCESSOR "X86_64")
+set(CMAKE_OSX_ARCHITECTURES "x86_64")
+project(cv_test )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( cv_test.app cv_test.cpp )
+target_link_libraries( cv_test.app ${OpenCV_LIBS} )
